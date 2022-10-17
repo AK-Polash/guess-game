@@ -32,7 +32,9 @@ input[type="number"] {
 #box__two,
 #box__three,
 #box__four,
-.box__five {
+.box__five,
+#player__three__name__box,
+#player__three__number__box {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -44,7 +46,9 @@ input[type="number"] {
 #player__one,
 #player__two,
 #player__two__heading__number,
-.game__over {
+.game__over,
+#player__three__heading__name,
+#player__three__heading__number {
   color: #000000;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +59,9 @@ input[type="number"] {
 #player__one__name,
 #player__one__number,
 #player__two__name,
-#player__two__number {
+#player__two__number,
+#player__three__name,
+#player__three__number {
   width: 868px;
   height: 132px;
   background: #ffffff;
@@ -73,14 +79,18 @@ input[type="number"] {
 #player__one__name::placeholder,
 #player__one__number::placeholder,
 #player__two__name::placeholder,
-#player__two__number::placeholder {
+#player__two__number::placeholder,
+#player__three__name::placeholder,
+#player__three__number::placeholder {
   color: #d9d9d9;
   /* text-align: center; */
 }
 #player__one__name:focus-visible,
 #player__one__number:focus-visible,
 #player__two__name:focus-visible,
-#player__two__number:focus-visible {
+#player__two__number:focus-visible,
+#player__three__name:focus-visible,
+#player__three__number:focus-visible {
   border: 1px solid transparent;
   outline: 1px solid #7041d3;
   transition: all linear 0.2s;
@@ -89,7 +99,9 @@ input[type="number"] {
 #box__two__lets__play,
 #box__three__name__btn,
 #box__four__number__btn,
-#reset__btn {
+#reset__btn,
+#player__three__name__btn,
+#player__three__number__btn {
   width: 362px;
   height: 78px;
   color: #ffffff;
@@ -107,7 +119,9 @@ input[type="number"] {
 #box__two__lets__play:hover,
 #box__three__name__btn:hover,
 #box__four__number__btn:hover,
-#reset__btn:hover {
+#reset__btn:hover,
+#player__three__name__btn:hover,
+#player__three__number__btn:hover {
   border: 2px solid #7041d3;
   background: transparent;
   color: #7041d3;
@@ -115,7 +129,9 @@ input[type="number"] {
 #give__name__error,
 #give__number__error,
 #player__two__name__error,
-#player__two__number__error {
+#player__two__number__error,
+#player__three__name__error,
+#player__three__number__error {
   width: 778px;
   color: #ffffff;
   background: #cc3030;
@@ -138,6 +154,6 @@ input[type="number"] {
   margin: 16px 0;
   /* visibility: hidden; */
 }
-#result{
+#result {
   margin-bottom: 50px;
 }
