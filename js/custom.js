@@ -1,5 +1,3 @@
-// let wanaPlayGame = document.querySelector("#wanna__play__game");
-
 // Names:
 let playerOneName = document.querySelector("#player__one__name");
 let playerTwoName = document.querySelector("#player__two__name");
@@ -52,6 +50,7 @@ startGameButton.addEventListener("click", () => {
 letsPlayButton.addEventListener("click", () => {
   if (playerOneNumber.value == "") {
     giveNumberError.style.visibility = "visible";
+    giveNumberError.innerHTML = "Please give a number";
   } else {
     if (playerOneNumber.value >= 1 && playerOneNumber.value <= 10) {
       giveNumberError.style.visibility = "hidden";
@@ -77,17 +76,16 @@ playerTwoNameButton.addEventListener("click", () => {
 playerTwoNumberButton.addEventListener("click", () => {
   if (playerTwoNumber.value == "") {
     playerTwoNumberError.style.visibility = "visible";
+    playerTwoNumberError.innerHTML = "Please gause a number";
   } else {
     playerTwoNumberError.style.visibility = "hidden";
     if (playerTwoNumber.value >= 1 && playerTwoNumber.value <= 10) {
       if (playerOneNumber.value != playerTwoNumber.value) {
-        console.log("hi");
         if (chanceNumber.innerHTML == 0) {
           boxFour.style.display = "none";
           boxFive.style.display = "flex";
           result.innerHTML = playerTwoName.value + " (Player - 1 Win)";
         } else {
-          console.log("Nothing..!");
           playerTwoNumberError.style.visibility = "visible";
           playerTwoNumberError.innerHTML = "Value is not Equal";
           chanceNumber.innerHTML--;
