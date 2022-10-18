@@ -152,17 +152,14 @@ playerThreeNameButton.addEventListener("click", () => {
 playerThreeNumberButton.addEventListener("click", () => {
   if (playerThreeNumber.value == "") {
     playerThreeNumberError.style.visibility = "visible";
-    playerThreeNumberError.innerHTML = "Gause a number bro";
+    playerThreeNumberError.innerHTML = "Gause a number";
   } else {
-    console.log("value dewa hoise");
     if (playerThreeNumber.value >= 1 && playerThreeNumber.value <= 10) {
-      console.log("value 1 theke 10 er moddhe ache");
-
       if (
         playerOneNumber.value != playerThreeNumber.value &&
         playerOneNumber.value != playerTwoNumber.value
       ) {
-        console.log("player 1 jitbe");
+        // console.log("player 1 jitbe");
         if (chanceNumberPlayerThree.innerHTML == 1) {
           playerThreeNumberBox.style.display = "none";
           boxFive.style.display = "flex";
@@ -176,7 +173,7 @@ playerThreeNumberButton.addEventListener("click", () => {
         playerOneNumber.value != playerThreeNumber.value &&
         playerOneNumber.value == playerTwoNumber.value
       ) {
-        console.log("player 2 jitbe");
+        // console.log("player 2 jitbe");
         if (chanceNumberPlayerThree.innerHTML == 1) {
           playerThreeNumberBox.style.display = "none";
           boxFive.style.display = "flex";
@@ -190,7 +187,7 @@ playerThreeNumberButton.addEventListener("click", () => {
         playerOneNumber.value == playerThreeNumber.value &&
         playerOneNumber.value == playerTwoNumber.value
       ) {
-        console.log("player 2 r player 3 dui jon e jitbe");
+        // console.log("player 2 r player 3 dui jon e jitbe");
         playerThreeNumberBox.style.display = "none";
         boxFive.style.display = "flex";
         result.innerHTML =
@@ -199,7 +196,7 @@ playerThreeNumberButton.addEventListener("click", () => {
           playerThreeName.value +
           " (Player - 2 & 3 Win)";
       } else {
-        console.log("player 3 jitbe");
+        // console.log("player 3 jitbe");
         playerThreeNumberBox.style.display = "none";
         boxFive.style.display = "flex";
         result.innerHTML = playerThreeName.value + " (Player - 3 Win)";
@@ -211,6 +208,7 @@ playerThreeNumberButton.addEventListener("click", () => {
   }
 });
 
+// Reset all:
 playAgainButton.addEventListener("click", () => {
   playerOneName.value = "";
   playerOneNumber.value = "";
