@@ -130,6 +130,7 @@ playerThreeNameButton.addEventListener("click", () => {
     playerThreeNameError.style.visibility = "visible";
     playerThreeNameError.innerHTML = "Give your name";
   } else {
+    playerThreeNameError.style.visibility = "hidden";
     playerThreeNameBox.style.display = "none";
     playerThreeNumberBox.style.display = "flex";
   }
@@ -202,7 +203,11 @@ playAgainButton.addEventListener("click", () => {
   playerOneNumber.value = "";
   playerTwoName.value = "";
   playerTwoNumber.value = "";
-  chanceNumber.innerHTML = 5;
+  playerThreeName.value = "";
+  playerThreeNumber.value = "";
+  playerThreeNumberError.style.visibility = "hidden";
+  chanceNumberPlayerTwo.innerHTML = 5;
+  chanceNumberPlayerThree.innerHTML = 5;
   boxFive.style.display = "none";
   boxOne.style.display = "flex";
 });
