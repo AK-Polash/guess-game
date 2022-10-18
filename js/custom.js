@@ -3,6 +3,11 @@ let playerOneName = document.querySelector("#player__one__name");
 let playerTwoName = document.querySelector("#player__two__name");
 let playerThreeName = document.querySelector("#player__three__name");
 
+// Headings:
+let playerOneHeading = document.querySelector("#player__one__heading");
+let playerTwoHeading = document.querySelector("#player__two__heading");
+let playerThreeHeading = document.querySelector("#player__three__heading");
+
 // Number:
 let playerOneNumber = document.querySelector("#player__one__number");
 let playerTwoNumber = document.querySelector("#player__two__number");
@@ -44,6 +49,7 @@ let playerThreeNumberBox = document.querySelector(
 );
 let boxFive = document.querySelector(".box__five");
 
+// Chance & Chance Numbers:
 let chancePlayerTwo = document.querySelector(".chance");
 let chanceNumberPlayerTwo = document.querySelector(
   "#chance__number__p2__number"
@@ -51,8 +57,11 @@ let chanceNumberPlayerTwo = document.querySelector(
 let chanceNumberPlayerThree = document.querySelector(
   "#chance__number__p3__number"
 );
+
+// final Result:
 let result = document.querySelector("#result");
 
+// Auto display none by js:
 boxTwo.style.display = "none";
 boxThree.style.display = "none";
 boxFour.style.display = "none";
@@ -60,6 +69,7 @@ playerThreeNameBox.style.display = "none";
 playerThreeNumberBox.style.display = "none";
 boxFive.style.display = "none";
 
+// All Event Listners:
 startGameButton.addEventListener("click", () => {
   if (playerOneName.value == "") {
     giveNameError.style.visibility = "visible";
@@ -67,6 +77,7 @@ startGameButton.addEventListener("click", () => {
     giveNameError.style.visibility = "hidden";
     boxOne.style.display = "none";
     boxTwo.style.display = "flex";
+    playerOneHeading.innerHTML = playerOneName.value;
   }
 });
 
@@ -93,6 +104,7 @@ playerTwoNameButton.addEventListener("click", () => {
     playerTwoNameError.style.visibility = "hidden";
     boxThree.style.display = "none";
     boxFour.style.display = "flex";
+    playerTwoHeading.innerHTML = playerTwoName.value;
   }
 });
 
@@ -104,7 +116,7 @@ playerTwoNumberButton.addEventListener("click", () => {
     playerTwoNumberError.style.visibility = "hidden";
     if (playerTwoNumber.value >= 1 && playerTwoNumber.value <= 10) {
       if (playerOneNumber.value != playerTwoNumber.value) {
-        if (chanceNumberPlayerTwo.innerHTML == 0) {
+        if (chanceNumberPlayerTwo.innerHTML == 1) {
           boxFour.style.display = "none";
           playerThreeNameBox.style.display = "flex";
           // result.innerHTML = playerTwoName.value + " (Player - 1 Win)";
@@ -133,6 +145,7 @@ playerThreeNameButton.addEventListener("click", () => {
     playerThreeNameError.style.visibility = "hidden";
     playerThreeNameBox.style.display = "none";
     playerThreeNumberBox.style.display = "flex";
+    playerThreeHeading.innerHTML = playerThreeName.value;
   }
 });
 
@@ -150,7 +163,7 @@ playerThreeNumberButton.addEventListener("click", () => {
         playerOneNumber.value != playerTwoNumber.value
       ) {
         console.log("player 1 jitbe");
-        if (chanceNumberPlayerThree.innerHTML == 0) {
+        if (chanceNumberPlayerThree.innerHTML == 1) {
           playerThreeNumberBox.style.display = "none";
           boxFive.style.display = "flex";
           result.innerHTML = playerOneName.value + " (Player - 1 Win)";
@@ -164,7 +177,7 @@ playerThreeNumberButton.addEventListener("click", () => {
         playerOneNumber.value == playerTwoNumber.value
       ) {
         console.log("player 2 jitbe");
-        if (chanceNumberPlayerThree.innerHTML == 0) {
+        if (chanceNumberPlayerThree.innerHTML == 1) {
           playerThreeNumberBox.style.display = "none";
           boxFive.style.display = "flex";
           result.innerHTML = playerOneName.value + " (Player - 2 Win)";
